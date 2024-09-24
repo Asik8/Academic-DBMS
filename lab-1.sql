@@ -33,4 +33,3 @@ VALUES
 -- SELECT Student_name,Student_id,Student_CG,Student_Age FROM STUDENT; 
 SELECT * FROM STUDENT; 
 
-Select Student_name FROM STUDENT;

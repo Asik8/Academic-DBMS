@@ -1,5 +1,5 @@
 USE Sa;
-CREATE TABLE Emp(
+CREATE TABLE E(
     ID INT PRIMARY KEY,
     Employee_Name VARCHAR(30),
     Salary INT NOT NULL,
@@ -30,6 +30,7 @@ INSERT INTO Emp(ID, Employee_Name, Salary, Department) VALUES
 
 
 -- SELECT * FROM Emp Where Department = "CSE"; 
+select 
 SELECT * FROM Emp Where Department = "CSE" and Salary>36000;
 
 Update Emp SET St_name = 'asikM' where id = 2;
