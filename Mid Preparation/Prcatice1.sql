@@ -95,3 +95,6 @@ select * from Patients where patientID in (Select PatientId from Appointments wh
 
 -- Task 12: Get the average age of all patients.
 select avg(Age) From Patients;
+
+-- Task 13: Find all appointments where the diagnosis contains the word "Pain".
+select Diagnosis from Appointments where Diagnosis like '%pain%';
