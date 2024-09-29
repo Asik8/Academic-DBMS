@@ -75,5 +75,5 @@ select * from Doctors where DepartmentID = (select DepartmentID From Departments
 -- Task 5: Retrieve the names of patients who have appointments in September 2024.
 select Name from Patients where PatientID in (Select PatientID From Appointments where AppointmentDate between '2024-09-01' and '2024-09-30');
 
-
-
+-- Task 6: Find the patient who was diagnosed with "Heart Attack".
+select * from Patients where PatientID in (select PatientID From Appointments where Diagnosis = 'Heart Attack');
