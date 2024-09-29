@@ -77,3 +77,6 @@ select Name from Patients where PatientID in (Select PatientID From Appointments
 
 -- Task 6: Find the patient who was diagnosed with "Heart Attack".
 select * from Patients where PatientID in (select PatientID From Appointments where Diagnosis = 'Heart Attack');
+
+-- Task 7: Get the total number of male and female patients.
+select Gender,count(*) from Patients group by Gender;
