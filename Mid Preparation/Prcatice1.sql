@@ -92,3 +92,6 @@ select DepartmentID, count(*) as total from Doctors group by DepartmentID order 
 
 -- Task 11: List the patients who have an appointment with a doctor from the "Orthopedics" department.
 select * from Patients where patientID in (Select PatientId from Appointments where DoctorID in (Select DoctorID from Doctors where DepartmentId = (select DepartmentID From Departments where DepartmentName = 'Orthopedics')));
+
+-- Task 12: Get the average age of all patients.
+select avg(Age) From Patients;
