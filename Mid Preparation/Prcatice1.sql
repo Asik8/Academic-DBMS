@@ -66,3 +66,8 @@ select * From Patients where PatientID IN (select PatientID From Appointments wh
 -- Task 2: Retrieve the names of doctors who specialize in "Cardiologist".
 select Name From Doctors where Specialty = 'Cardiologist';
 
+-- Task 3: Find the total number of appointments for each doctor.
+select DoctorID, Count(*) FROM Appointments group by DoctorID; 
+
+
+
