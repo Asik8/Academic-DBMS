@@ -83,3 +83,9 @@ select Gender,count(*) from Patients group by Gender;
 
 -- Task 8: List the doctors who have more than 5 years of experience.
 select * from Doctors where ExperienceYears > 5;
+
+-- Task 9: Retrieve the names of patients treated by "Dr. Alice".
+select Name from Patients where PatientID in (select PatientID From Appointments where DoctorID = (select DoctorID from Doctors where Name = 'Dr. Alice'));
+
+-- Task 10: Find the department with the most doctors.
+select DepartmentID, count(*) as total from Doctors group by DepartmentID order by total desc limit 1;
