@@ -60,3 +60,7 @@ INSERT INTO Appointments (AppointmentID, PatientID, DoctorID, AppointmentDate, D
 (306, 201, 103, '2024-09-28', 'Knee Pain'),
 (307, 202, 103, '2024-09-29', 'Back Pain');
 
+-- Task-1: List all the patients who have an appointment on or after September 25, 2024.
+select * From Patients where PatientID IN (select PatientID From Appointments where AppointmentDate >= '2024-09-25')
+
+-- 
