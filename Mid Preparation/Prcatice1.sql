@@ -61,6 +61,8 @@ INSERT INTO Appointments (AppointmentID, PatientID, DoctorID, AppointmentDate, D
 (307, 202, 103, '2024-09-29', 'Back Pain');
 
 -- Task-1: List all the patients who have an appointment on or after September 25, 2024.
-select * From Patients where PatientID IN (select PatientID From Appointments where AppointmentDate >= '2024-09-25')
+select * From Patients where PatientID IN (select PatientID From Appointments where AppointmentDate >= '2024-09-25');
 
--- 
+-- Task 2: Retrieve the names of doctors who specialize in "Cardiologist".
+select Name From Doctors where Specialty = 'Cardiologist';
+
