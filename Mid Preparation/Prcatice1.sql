@@ -69,5 +69,8 @@ select Name From Doctors where Specialty = 'Cardiologist';
 -- Task 3: Find the total number of appointments for each doctor.
 select DoctorID, Count(*) FROM Appointments group by DoctorID; 
 
+-- Task 4: List all the doctors from the "Pediatrics" department.
+select * from Doctors where DepartmentID = (select DepartmentID From Departments where DepartmentName = 'Pediatrics');
+
 
 
