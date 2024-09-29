@@ -104,3 +104,6 @@ select * from Appointments where appointmentDate = (select max(AppointmentDate) 
 
 -- Task 15: Find the department with the highest average years of experience among doctors.
 SELECT DepartmentName FROM Departments WHERE DepartmentID IN (SELECT DepartmentID FROM Doctors GROUP BY DepartmentID ORDER BY AVG(ExperienceYears) DESC LIMIT 1);
+
+-- 16. Retrieve the names of doctors who have treated more than one unique patient.
+select Name from Doctors where DoctorID in (select DoctorID from appointments group by DoctorId having count(distinct PatientID)>1);
