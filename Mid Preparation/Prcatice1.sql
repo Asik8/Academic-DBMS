@@ -101,3 +101,6 @@ select Diagnosis from Appointments where Diagnosis like '%pain%';
 
 -- Task 14: Retrieve the details of the most recent appointment.
 select * from Appointments where appointmentDate = (select max(AppointmentDate) from Appointments);
+
+-- Task 15: Find the department with the highest average years of experience among doctors.
+SELECT DepartmentName FROM Departments WHERE DepartmentID IN (SELECT DepartmentID FROM Doctors GROUP BY DepartmentID ORDER BY AVG(ExperienceYears) DESC LIMIT 1);
