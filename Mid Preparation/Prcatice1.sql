@@ -72,5 +72,8 @@ select DoctorID, Count(*) FROM Appointments group by DoctorID;
 -- Task 4: List all the doctors from the "Pediatrics" department.
 select * from Doctors where DepartmentID = (select DepartmentID From Departments where DepartmentName = 'Pediatrics');
 
+-- Task 5: Retrieve the names of patients who have appointments in September 2024.
+select Name from Patients where PatientID in (Select PatientID From Appointments where AppointmentDate between '2024-09-01' and '2024-09-30');
+
 
 
