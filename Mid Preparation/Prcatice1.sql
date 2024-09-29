@@ -89,3 +89,6 @@ select Name from Patients where PatientID in (select PatientID From Appointments
 
 -- Task 10: Find the department with the most doctors.
 select DepartmentID, count(*) as total from Doctors group by DepartmentID order by total desc limit 1;
+
+-- Task 11: List the patients who have an appointment with a doctor from the "Orthopedics" department.
+select * from Patients where patientID in (Select PatientId from Appointments where DoctorID in (Select DoctorID from Doctors where DepartmentId = (select DepartmentID From Departments where DepartmentName = 'Orthopedics')));
