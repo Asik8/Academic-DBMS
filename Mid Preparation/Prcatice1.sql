@@ -80,3 +80,6 @@ select * from Patients where PatientID in (select PatientID From Appointments wh
 
 -- Task 7: Get the total number of male and female patients.
 select Gender,count(*) from Patients group by Gender;
+
+-- Task 8: List the doctors who have more than 5 years of experience.
+select * from Doctors where ExperienceYears > 5;
