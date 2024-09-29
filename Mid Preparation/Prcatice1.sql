@@ -98,3 +98,6 @@ select avg(Age) From Patients;
 
 -- Task 13: Find all appointments where the diagnosis contains the word "Pain".
 select Diagnosis from Appointments where Diagnosis like '%pain%';
+
+-- Task 14: Retrieve the details of the most recent appointment.
+select * from Appointments where appointmentDate = (select max(AppointmentDate) from Appointments);
