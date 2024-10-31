@@ -68,3 +68,183 @@ Select t.tname, count(c.cid) from Teachers t Left Join Courses c On t.tid = c.ti
 
 -- Query-10: Show the teacher-student pairs for students in grade level 10 or above.
 Select distinct t.tname, s.sname from Teachers t Join Courses c On t.tid = c.tid Join Students s On s.sid = c.sid where s.gl>=10;
+
+-- More Practice:
+-- Q-11: List all students with their ages and grade levels.
+
+-- Q-12: Count the total number of courses in which students are enrolled.
+
+-- Q-13: Find the highest grade level among students.
+
+-- Q-14: List all students in descending order by age.
+
+-- Q-15: Find the teacher who teaches the most courses.
+
+-- Q-16: Find all students who share the same teacher.
+
+-- Q-17: Count the total number of students enrolled in each course.
+
+-- Q-18: Show students and the total number of courses they are enrolled in.
+
+-- Q-19: List teachers and their subjects in alphabetical order.
+
+-- Q-20: Show all students who have a teacher assigned for each of their courses.
+
+-- Q-21: List the names of students in grade levels 10 and above.
+
+-- Q-22: Find students who are 15 years or older and enrolled in a 'Math' course.
+
+-- Q-23: Show the average age of students per grade level.
+
+-- Q-24: List all teachers and the subjects they teach, with no duplicate entries.
+
+-- Q-25: Display students who are enrolled in more than one course.
+
+-- Q-26: Find the names of students enrolled in both 'Biology' and 'Physics'.
+
+-- Q-27: List all students, their courses, and teacher names, sorted by student age.
+
+-- Q-28: Show all courses that do not have any enrolled students.
+
+-- Q-29: Find the oldest student enrolled in any course.
+
+-- Q-30: List all students whose names start with the letter 'A'.
+
+-- Q-31: Display the total number of students assigned to each teacher.
+
+-- Q-32: List all courses along with their assigned teacher names, sorted by course name.
+
+-- Q-33: Identify courses where all students are 16 years or older.
+
+-- Q-34: Count the number of students in each grade level.
+
+-- Q-35: Show the names of students not taking 'Chemistry'.
+
+-- Q-36: Find teachers who do not have any students assigned.
+
+-- Q-37: Display students and their corresponding teacher names for the subject 'History'.
+
+-- Q-38: Show courses and teacher names where students are in grade 12.
+
+-- Q-39: List all students and their teachers, including those without any courses.
+
+-- Q-40: Find the most common course among students.
+
+-- Q-41: Show the total count of distinct subjects taught by each teacher.
+
+-- Q-42: List students along with their teachers and courses, ordered by grade level.
+
+-- Q-43: Find teachers who teach both 'Math' and 'Science'.
+
+-- Q-44: Display all students whose age is below the average age.
+
+-- Q-45: Identify courses with the least number of enrolled students.
+
+-- Q-46: Find the teacher who teaches students in grade level 9.
+
+-- Q-47: Show students with an odd-numbered student ID.
+
+-- Q-48: List all courses along with students enrolled in them, sorted by course name.
+
+-- Q-49: Display students and teachers assigned to subjects that start with 'S'.
+
+-- Q-50: Show all students and teachers where the student is older than 15 years.
+-- Q-51: List all teachers who have more than 2 students assigned to them.
+
+-- Q-52: Display the name of the course with the highest number of enrolled students.
+
+-- Q-53: Show the teacher names and subjects of all teachers who teach students under 16 years of age.
+
+-- Q-54: List students along with the courses they are not enrolled in.
+
+-- Q-55: Find the average grade level of students in each course.
+
+-- Q-56: Display all students along with their teacher's name and subject, ordered by teacher name.
+
+-- Q-57: Show the total number of students for each subject taught by a teacher.
+
+-- Q-58: List all students who are not enrolled in any course taught by 'Dr. Brown'.
+
+-- Q-59: Show the teacher and course names for each course taken by students in grade level 9.
+
+-- Q-60: Display the maximum, minimum, and average ages of students.
+
+-- Q-61: List all students who share the same first letter in their name as their teacher’s name.
+
+-- Q-62: Identify students who are in the same grade level but assigned to different teachers.
+
+-- Q-63: Show the count of students who are enrolled in 'Algebra'.
+
+-- Q-64: Find students who are in the same course but have different teachers.
+
+-- Q-65: Display courses taken by the youngest student.
+
+-- Q-66: List teachers who have students only in grade 10.
+
+-- Q-67: Show all students and their teacher names in alphabetical order of student names.
+
+-- Q-68: Find the names of all students who are younger than any student in grade 12.
+
+-- Q-69: List the teachers and their students, only for courses with more than 1 student.
+
+-- Q-70: Show the teacher and subject for courses taken by students whose names end with the letter 'e'.
+
+-- Q-71: Display the distinct subjects taught to students in grade level 9.
+
+-- Q-72: Show all students who have teachers from both 'Math' and 'Science'.
+
+-- Q-73: List all teachers who do not teach students in grade level 10.
+
+-- Q-74: Display courses taught by the teacher with the fewest number of students.
+
+-- Q-75: Show all teachers and students who are associated through exactly one course.
+
+-- Q-76: List students who are in the same course as students in grade level 12.
+
+-- Q-77: Find the teacher names for courses that have students in every grade level.
+
+-- Q-78: Show all students who are older than the average age of students in their grade level.
+
+-- Q-79: List students and courses, excluding those courses that only have one enrolled student.
+
+-- Q-80: Display the subjects taught by each teacher and count the number of courses per subject.
+
+-- Q-81: Show all teachers who teach courses to students of exactly one age group.
+
+-- Q-82: List students who have more courses than any other student.
+
+-- Q-83: Display students and their teachers who teach 'Science' or 'Math'.
+
+-- Q-84: Identify the teachers with students in both the youngest and oldest grade levels.
+
+-- Q-85: List the students along with the total number of teachers assigned to them.
+
+-- Q-86: Find courses that have students in grade 11 and a teacher who also teaches grade 9 students.
+
+-- Q-87: Show students who are in the top 50% age group among all students.
+
+-- Q-88: Display the names of students who are not enrolled in 'History'.
+
+-- Q-89: List the subjects where teachers have students enrolled from multiple grades.
+
+-- Q-90: Show teachers who have students both under and over 15 years old.
+
+-- Q-91: Find students who are only assigned to teachers whose names start with 'M'.
+
+-- Q-92: List all courses that have more students than the course 'Geometry'.
+
+-- Q-93: Display students and teachers, ordered by the number of students per teacher.
+
+-- Q-94: Find the names of teachers who only teach students in grades 9 and 12.
+
+-- Q-95: List students who are not enrolled in any course that a teacher named 'Mr. Smith' teaches.
+
+-- Q-96: Show students whose teacher is also assigned to another student in a higher grade.
+
+-- Q-97: Display the youngest student in each course.
+
+-- Q-98: List teachers who have students exclusively in grades 10 and 11.
+
+-- Q-99: Show all students and the count of distinct courses they are enrolled in.
+
+-- Q-100: Display the names of students in courses where the average student age is above 15.
