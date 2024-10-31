@@ -88,7 +88,7 @@ select * from Doctors where ExperienceYears > 5;
 select Name from Patients where PatientID in (select PatientID From Appointments where DoctorID = (select DoctorID from Doctors where Name = 'Dr. Alice'));
 
 -- Task 10: Find the department with the most doctors.
-select DepartmentID, count(*) as total from Doctors group by DepartmentID order by total desc limit 1;
+select DepartmentID from Doctors group by DepartmentID order by total desc limit 1;
 
 -- Task 11: List the patients who have an appointment with a doctor from the "Orthopedics" department.
 select * from Patients where patientID in (Select PatientId from Appointments where DoctorID in (Select DoctorID from Doctors where DepartmentId = (select DepartmentID From Departments where DepartmentName = 'Orthopedics')));
@@ -107,3 +107,5 @@ SELECT DepartmentName FROM Departments WHERE DepartmentID IN (SELECT DepartmentI
 
 -- 16. Retrieve the names of doctors who have treated more than one unique patient.
 select Name from Doctors where DoctorID in (select DoctorID from appointments group by DoctorId having count(distinct PatientID)>1);
+
+-- Task 17: Find the patient with the highest number of appointments.
