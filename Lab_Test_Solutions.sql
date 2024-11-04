@@ -71,12 +71,16 @@ Select distinct t.tname, s.sname from Teachers t Join Courses c On t.tid = c.tid
 
 -- More Practice:
 -- Q-11: List all students with their ages and grade levels.
+select * from students;
 
 -- Q-12: Count the total number of courses in which students are enrolled.
+select Count(cid) from Courses;
 
 -- Q-13: Find the highest grade level among students.
+select sname from Students where gl = (select max(gl) from Students);
 
 -- Q-14: List all students in descending order by age.
+select * from Students group by age order by asc;
 
 -- Q-15: Find the teacher who teaches the most courses.
 
@@ -248,3 +252,83 @@ Select distinct t.tname, s.sname from Teachers t Join Courses c On t.tid = c.tid
 -- Q-99: Show all students and the count of distinct courses they are enrolled in.
 
 -- Q-100: Display the names of students in courses where the average student age is above 15.
+-- Q-101: List all students along with their teachers and the courses they are enrolled in.
+
+-- Q-102: Display all students along with the subjects of their teachers using a JOIN.
+
+-- Q-103: Show each student’s name, course name, and the name of their teacher for each course.
+
+-- Q-104: Find all students and their teachers, including students who are not enrolled in any course (use LEFT JOIN).
+
+-- Q-105: List teachers who teach multiple students along with the names of those students.
+
+-- Q-106: Show the count of students enrolled in each course and the name of the teacher (use JOIN and GROUP BY).
+
+-- Q-107: Display each course's name along with the names of students and their assigned teacher for that course.
+
+-- Q-108: List all students, their age, their grade level, and the names of the teachers they are assigned to.
+
+-- Q-109: Display the names of teachers who teach 'Chemistry' and list the students enrolled in that course.
+
+-- Q-110: Find all courses taken by students aged 15 or older and display the teacher names along with the course names.
+
+-- Q-111: List students and the names of teachers who teach subjects other than 'History' that they are enrolled in.
+
+-- Q-112: Show all teachers and their students for each course, even if the course does not have students assigned (use LEFT JOIN).
+
+-- Q-113: List each teacher and the total number of students they have across all their courses (use JOIN and GROUP BY).
+
+-- Q-114: Display all students enrolled in 'Physics' along with their teacher's name and subject.
+
+-- Q-115: Show each student's name, age, course name, and the corresponding teacher's name.
+
+-- Q-116: List all students who have the same teacher for two or more different courses.
+
+-- Q-117: Find all teachers who have students in grade level 9 and display those students' names.
+
+-- Q-118: Show all courses along with the names of students enrolled and their respective teacher's subject.
+
+-- Q-119: List the names of students who have a teacher assigned to both 'Math' and 'Science'.
+
+-- Q-120: Display each teacher's name and the list of unique students they are teaching across all courses.
+
+-- Q-121: Find teachers who teach both 'Algebra' and 'Geometry' and list their students.
+
+-- Q-122: Show the course names and teacher names for all courses that have students aged 17.
+
+-- Q-123: List all teachers and their students in courses where the teacher teaches more than one subject.
+
+-- Q-124: Display the course names, students, and teachers for courses taken by students in grade 10 or higher.
+
+-- Q-125: Find all teachers and students where students are not in the teacher's main subject.
+
+-- Q-126: Show each student's name and the names of teachers teaching different subjects that the student is enrolled in.
+
+-- Q-127: List teachers along with the count of students they teach in each subject.
+
+-- Q-128: Display all courses along with their teacher's name and the students' names enrolled in those courses.
+
+-- Q-129: Show the names of all teachers who have students enrolled in both 'Biology' and 'Chemistry'.
+
+-- Q-130: Find teachers who have students across different age groups in the same course.
+
+-- Q-131: List all teachers along with the students in their courses who are in grade level 12.
+
+-- Q-132: Display students and teachers for each course, even if there are no students assigned (use LEFT JOIN).
+
+-- Q-133: Show each teacher's name, subject, and the names of their students who are younger than 16.
+
+-- Q-134: List students who are enrolled in the same course as students with a different teacher.
+
+-- Q-135: Display all courses, their teachers, and students, where the course has more than one student enrolled.
+
+-- Q-136: Find the count of students in each course for teachers who teach at least two subjects.
+
+-- Q-137: List students along with the teachers for all courses they are not enrolled in (use LEFT JOIN).
+
+-- Q-138: Show each student’s name, grade level, course name, and the name of their teacher's subject.
+
+-- Q-139: Display the names of students who share a teacher with a student in grade level 11.
+
+-- Q-140: List all courses along with their teachers and students who are older than the average student age in their grade level.
+select c.cname, t.tname, s.sname,s.age,s.gl from Courses c Join Teachers t on c.tid = t.tid Join Students s On c.sid = s.sid where s.age>(select avg(s2.age) from Students s2 where s2.gl = s.gl);
