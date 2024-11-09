@@ -47,22 +47,22 @@ INSERT INTO Projects (project_id, project_name, emp_id) VALUES
 (205, 'Project Epsilon', 1);
 
 -- Q-1: List all employees and their associated department names.
-select e.name, d.department_name from Employees e join Departments d on e.department_id = d.department_id;
+select e.name, d.department_name from Employees e join Departments d on e.department_id=d.department_id;
 
 -- Q-2: Find the names of employees who work in the 'IT' department.
-select e.name from Employees e join Departments d on e.department_id = d.department_id where d.department_name='IT';
+select e.name, d.department_name from Employees e join Departments d on e.department_id=d.department_id where d.department_name= 'IT';
 
 -- Q-3: List all projects along with the names of employees who are working on them.
-select e.name,p.project_name from Employees e join Projects p on e.emp_id=p.emp_id;
+select p.project_name,e.name from Projects p join Employees e on p.emp_id=e.emp_id;
 
 -- Q-4: Find the location of departments where employees are working on 'Project Alpha'.
-select d.location from Departments d join Employees e on d.department_id=e.department_id join Projects p on e.emp_id=p.emp_id where project_name = 'Project Alpha';
+select d.location from Departments d join Employees e on e.department_id=d.department_id join Projects p on e.emp_id=p.emp_id where p.project_name='Project Alpha';
 
 -- Q-5: List the names of all employees who do not have any projects assigned to them.
-select e.name from Employees e join Projects p on e.emp_id=p.emp_id where p.emp_id is NULL;
+select e.name from Employees e left join Projects p on e.emp_id=p.emp_id where p.project_name is NULL;
 
 -- Q-6: Lists each employee's name along with their department and project names (if they are assigned to any projects).
-select e.name, d.department_name, p.project_name from Employees e join Departments d on e.department_id= d.department_id join Projects p on e.emp_id = p.emp_id;
+
 
 -- Q-7: Shows the total salary expenditure for each department.
 -- Q-8: Displays names of employees who work in departments located in New York.
